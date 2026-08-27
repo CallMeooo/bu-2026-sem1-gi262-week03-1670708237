@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 namespace Solution
@@ -8,31 +9,19 @@ namespace Solution
 
     public class OOPPlayer : Character
     {
+        private InputAction moveAction;
 
         public void Start()
         {
+            moveAction = InputSystem.actions.FindAction("Move");
             PrintInfo();
             GetRemainEnergy();
         }
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                Move(Vector2.up);
-            }
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                Move(Vector2.down);
-            }
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                Move(Vector2.left);
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                Move(Vector2.right);
-            }
+            Vector2 direction = moveAction.ReadValue<Vector2>();
+            Move(direction);
         }
 
         public void Attack(OOPEnemy _enemy)
