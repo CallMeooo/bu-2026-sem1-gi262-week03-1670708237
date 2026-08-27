@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3027359078571866571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5733433177445407064}
+  m_Layer: 0
+  m_Name: Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5733433177445407064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3027359078571866571}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2592881412648572649}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4438619552300210350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 962238967185088404}
+  m_Layer: 0
+  m_Name: Item
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &962238967185088404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438619552300210350}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2592881412648572649}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5008301238646495982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2592881412648572649}
+  - component: {fileID: 3379645909298049818}
+  m_Layer: 0
+  m_Name: MapController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2592881412648572649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5008301238646495982}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2017854439703414493}
+  - {fileID: 5733433177445407064}
+  - {fileID: 962238967185088404}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3379645909298049818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5008301238646495982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a9034ca3c5c264888c6c14c5b66644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  X: 8
+  Y: 8
+  player: {fileID: 0}
+  playerStartPos: {x: 0, y: 0}
+  Exit: {fileID: 0}
+  floorsPrefab:
+  - {fileID: 106160, guid: 61cd2ef9d7fab69439c1402600b7505e, type: 3}
+  - {fileID: 137908, guid: bfbb89f3ff25ad342a50725f67e13072, type: 3}
+  - {fileID: 125636, guid: 75f873e6fd1862a4fb57364a1918b9f7, type: 3}
+  - {fileID: 177044, guid: c0a446bfce42b5949997915afe5e45ba, type: 3}
+  - {fileID: 109612, guid: af913515540d5ce4c815cb6695d939c5, type: 3}
+  - {fileID: 127736, guid: cbce535e7b58241459599cc52d502a60, type: 3}
+  - {fileID: 110520, guid: 9a08e691c16fa324cb4ab676dd3f54fe, type: 3}
+  - {fileID: 110520, guid: 635b9091859de2f49b92adc887a58e0c, type: 3}
+  wallsPrefab:
+  - {fileID: 110520, guid: 66c338dbf98058a4db2fd56a4c53f8a6, type: 3}
+  - {fileID: 110520, guid: 7964157270195954e9ae53bcd7bec1e8, type: 3}
+  - {fileID: 110520, guid: 12d480cf109372b4ebea6ffdf583dc84, type: 3}
+  - {fileID: 110520, guid: 86f4c86ef9b1c7d428e1fd12809838db, type: 3}
+  - {fileID: 110520, guid: 5f5308d611290c04ba52e80321418073, type: 3}
+  - {fileID: 110520, guid: cc1c844637a4152488d9959b7ad3ee9a, type: 3}
+  - {fileID: 110520, guid: 1332ac08e5c88f0419a2327413bc7d1d, type: 3}
+  - {fileID: 110520, guid: 0f00126b5ff4d9d439461c2fcf253f99, type: 3}
+  demonWallsPrefab:
+  - {fileID: 110520, guid: 0f24f7a1785fb124d96994c3039d5ce5, type: 3}
+  - {fileID: 110520, guid: 8c04c7250e684c846b2dd29d57580d18, type: 3}
+  itemsPrefab:
+  - {fileID: 6476303242912763235, guid: 1153436a21fd4ef41b44392c933bf7e2, type: 3}
+  - {fileID: 6476303242912763235, guid: e7661854a8eab65409eefafa34c6607a, type: 3}
+  floorParent: {fileID: 2017854439703414493}
+  wallParent: {fileID: 5733433177445407064}
+  itemPotionParent: {fileID: 962238967185088404}
+  obsatcleCount: 0
+  itemPotionCount: 0
+  empty: 0
+  demonWall: 1
+  potion: 2
+  bonuesPotion: 3
+  exit: 4
+--- !u!1 &7680843978735096706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2017854439703414493}
+  m_Layer: 0
+  m_Name: Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2017854439703414493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7680843978735096706}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2592881412648572649}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
