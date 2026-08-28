@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 0
@@ -225,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 634705958}
   - component: {fileID: 634705957}
-  - component: {fileID: 634705956}
+  - component: {fileID: 634705959}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -233,26 +229,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &634705956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 634705955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &634705957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +259,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &634705959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634705955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!114 &760521284 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
@@ -605,6 +612,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -719,75 +727,75 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: itemsPrefab.Array.data[0]
+      propertyPath: 'itemsPrefab.Array.data[0]'
       value: 
       objectReference: {fileID: 6476303242912763235, guid: 86926da40248a04478456d108c6fae6d, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: itemsPrefab.Array.data[1]
+      propertyPath: 'itemsPrefab.Array.data[1]'
       value: 
       objectReference: {fileID: 6476303242912763235, guid: 76f2f38c664723b42aea03f157bcc7ae, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: wallsPrefab.Array.data[0]
+      propertyPath: 'wallsPrefab.Array.data[0]'
       value: 
       objectReference: {fileID: 110520, guid: b1361c167057d93419e387f0e521b453, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: wallsPrefab.Array.data[1]
+      propertyPath: 'wallsPrefab.Array.data[1]'
       value: 
       objectReference: {fileID: 110520, guid: 160d1ca5bdb308248a5ee74ad266bb23, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: wallsPrefab.Array.data[2]
+      propertyPath: 'wallsPrefab.Array.data[2]'
       value: 
       objectReference: {fileID: 110520, guid: 20969559de7d2744bb44998e99ce9982, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: wallsPrefab.Array.data[3]
+      propertyPath: 'wallsPrefab.Array.data[3]'
       value: 
       objectReference: {fileID: 110520, guid: 7cd8a1715bfab6c4d90c0fab66f9a28d, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: wallsPrefab.Array.data[4]
+      propertyPath: 'wallsPrefab.Array.data[4]'
       value: 
       objectReference: {fileID: 110520, guid: 5d04ed77d9b2f084d95198c3d5054934, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: wallsPrefab.Array.data[5]
+      propertyPath: 'wallsPrefab.Array.data[5]'
       value: 
       objectReference: {fileID: 110520, guid: 41b95ddc38b31c54494887bffe170189, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: wallsPrefab.Array.data[6]
+      propertyPath: 'wallsPrefab.Array.data[6]'
       value: 
       objectReference: {fileID: 110520, guid: 8e340b745bf3d534d97def82977de0ad, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: wallsPrefab.Array.data[7]
+      propertyPath: 'wallsPrefab.Array.data[7]'
       value: 
       objectReference: {fileID: 110520, guid: e797d0509f378e74ca179da99e1f671a, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: floorsPrefab.Array.data[0]
+      propertyPath: 'floorsPrefab.Array.data[0]'
       value: 
       objectReference: {fileID: 106160, guid: 038998774947c4a8fa170d5b4492a7dd, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: floorsPrefab.Array.data[1]
+      propertyPath: 'floorsPrefab.Array.data[1]'
       value: 
       objectReference: {fileID: 137908, guid: 41775b29042354678bcd58bb1a75871e, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: floorsPrefab.Array.data[2]
+      propertyPath: 'floorsPrefab.Array.data[2]'
       value: 
       objectReference: {fileID: 125636, guid: 74398dca0c1f64f34aab8ba7bdb6c527, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: floorsPrefab.Array.data[3]
+      propertyPath: 'floorsPrefab.Array.data[3]'
       value: 
       objectReference: {fileID: 177044, guid: ed4c829589732490894350b134530050, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: floorsPrefab.Array.data[4]
+      propertyPath: 'floorsPrefab.Array.data[4]'
       value: 
       objectReference: {fileID: 109612, guid: 04993e7a7b0514f0c8857ff106529ce1, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: floorsPrefab.Array.data[5]
+      propertyPath: 'floorsPrefab.Array.data[5]'
       value: 
       objectReference: {fileID: 127736, guid: 4cdf8ac85eff446d0a8fefbdc8c6569f, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: floorsPrefab.Array.data[6]
+      propertyPath: 'floorsPrefab.Array.data[6]'
       value: 
       objectReference: {fileID: 110520, guid: 5535fd6cd705e4a79a1d5a4f114de5dc, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: floorsPrefab.Array.data[7]
+      propertyPath: 'floorsPrefab.Array.data[7]'
       value: 
       objectReference: {fileID: 110520, guid: c18e9692903814865aa9a855aaa66df5, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
@@ -795,11 +803,11 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: demonWallsPrefab.Array.data[0]
+      propertyPath: 'demonWallsPrefab.Array.data[0]'
       value: 
       objectReference: {fileID: 110520, guid: a0e1cbb2ed4ebe2438ddc619ee2fef83, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
-      propertyPath: demonWallsPrefab.Array.data[1]
+      propertyPath: 'demonWallsPrefab.Array.data[1]'
       value: 
       objectReference: {fileID: 110520, guid: 0c33ad76486a7d9468826fa09c7942d0, type: 3}
     m_RemovedComponents: []
