@@ -4,10 +4,14 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 // OOPWall aka "Demon Wall"
-public class OOPWall : MonoBehaviour
+public class OOPWall : Identity
 {
-    public string Name;
-    public int positionX;
-    public int positionY;
-    public OOPMapGenerator mapGenerator;
+    public int Damage = 5;
+    public override void Hit()
+    {
+        base.Hit();
+        mapGenerator.player.TakeDamage(Damage);
+        mapGenerator.mapdata[positionX, positionY] = mapGenerator.empty;
+        Destroy(gameObject);
+    }
 }

@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OOPItemPotion : MonoBehaviour
+public class OOPItemPotion : Identity
 {
-    public string Name;
-    public int positionX;
-    public int positionY;
-    public OOPMapGenerator mapGenerator;
+    public int healPoint = 20;
+    public override void Hit()
+    {
+        mapGenerator.player.Heal(healPoint);
+        Debug.Log("You got " + Name + " : " + healPoint);
+        mapGenerator.mapdata[positionX, positionY] = mapGenerator.empty;
+        Destroy(gameObject);
+    }
 }
